@@ -351,6 +351,31 @@ input[type="range"] {
   width: 60%;
 }
 
+.reels-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding: 40px 0;
+  }
+
+  .reels-video-wrapper {
+    width: 100%;
+    max-width: 360px; /* Largura típica de celular */
+    aspect-ratio: 9 / 16; /* Proporção vertical */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    position: relative;
+  }
+
+  .reels-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     .product-container {
