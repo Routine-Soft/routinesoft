@@ -3,7 +3,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: #ffffff;
+    background-color: #000000;
     margin: 0;
     padding: 0;
 }
@@ -11,33 +11,6 @@ body {
 /* Seção 1 - Headline e Imagem */
 .section-1 {
     
-}
-
-.div-button-sectin-1{
-  display: flex;
-  flex-direction: row;
-}
-
-.btn-section-1{
-  background-color: #3aaaa8;
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  font-size: 15px;
-  padding: 12px;
-  margin-right: 3px;
-  cursor: pointer;
-}
-
-.btn-section-1-2{
-  background-color: #fff;
-  color: #226160;
-  border: 2px solid #226160 ;
-  border-radius: 12px;
-  font-size: 15px;
-  padding: 12px;
-  margin-left: 3px;
-  cursor: pointer;
 }
 
 .row {
@@ -52,6 +25,12 @@ body {
 .col-a {
     flex: 1;
     margin-right: 20px;
+    align-items: start;
+    justify-content: start;
+}
+
+.div1home{
+  display: flex;
 }
 
 .col-a h1 {
@@ -61,11 +40,32 @@ body {
     color: transparent; /* Define o texto como transparente para mostrar o gradiente */
 }
 
+.experiencia{
+    font-size: 1.5rem;
+    background-image: linear-gradient(90deg, #3aaaa8, #226160); /* Gradiente de duas cores */
+    -webkit-background-clip: text; /* Faz com que o gradiente afete o texto */
+    color: transparent; /* Define o texto como transparente para mostrar o gradiente */
+    text-align: center;
+}
+
+.titlecontact{
+    font-size: 1.5rem;
+    background-image: linear-gradient(90deg, #3aaaa8, #226160); /* Gradiente de duas cores */
+    -webkit-background-clip: text; /* Faz com que o gradiente afete o texto */
+    color: transparent; /* Define o texto como transparente para mostrar o gradiente */
+    text-align: center;
+}
+
+.descricao{
+    color: #ffffff;
+    text-align: center;
+}
+
 
 .col-a h2 {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #02071b;
+    color: #ffffff;
 }
 
 .col-b {
@@ -75,13 +75,13 @@ body {
 }
 
 .col-b img {
-    max-width: 100%;
-    border-radius: 10px;
+    max-width: 70%;
+    border-radius: 200px;
 }
 
 /* Seção 2 - Cards de Produtos */
 .section-2 {
-    padding: 50px;
+    padding: 50px 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */
@@ -94,7 +94,7 @@ a {
 }
 
 .card {
-    background-color: #01040f;
+    background-color: #133636;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
@@ -150,6 +150,16 @@ a {
 .img2{
     width: 200px;
 } 
+
+.btn-ver{
+    background-color: #ffffff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+}
 
 .section-3 {
     background-color: #01040f;
@@ -363,11 +373,7 @@ input[type="range"] {
         font-size: 1rem;
         padding: 8px 16px;
     }
-}
 
-
-/* Responsividade */
-@media (max-width: 768px) {
     .row {
         flex-direction: column; /* Muda a direção dos itens para coluna */
         align-items: center; /* Centraliza os itens */
@@ -383,26 +389,28 @@ input[type="range"] {
     }
 
     .col-a h2 {
-        font-size: 1.2rem; /* Diminui o tamanho da fonte */
+        font-size: 1.1rem; /* Diminui o tamanho da fonte */
     }
 
     .section-2 {
-        padding: 20px; /* Reduz o padding vertical */
-
+        padding: 20px 0; /* Reduz o padding vertical */
     }
 
     .card {
-        max-width: 80%; /* Aumenta a largura máxima dos cards */
-        margin: none;
+        max-width: 90%; /* Aumenta a largura máxima dos cards */
     }
 
     .card p {
         font-size: 0.9rem; /* Diminui o tamanho da fonte do parágrafo */
     }
-
-    .plans {
-      flex-direction: column;
-      align-items: center;
+    .div1home{
+      display: block;
+    }
+    h1{
+      display: none;
+    }
+    h2{
+      text-align: center;
     }
 }
 
@@ -413,5 +421,14 @@ input[type="range"] {
 
     .col-a h2 {
         font-size: 1rem; /* Diminui ainda mais o tamanho da fonte */
+    }
+    .div1home{
+      display: block;
+    }
+    h1{
+      display: none;
+    }
+    h2{
+      text-align: center;
     }
 }
