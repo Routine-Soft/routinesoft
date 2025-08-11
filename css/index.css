@@ -432,6 +432,10 @@ input[type="range"] {
   padding: 10px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Responsivo para telas pequenas */
 @media (max-width: 768px) {
   .reels-section {
