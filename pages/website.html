@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic meta tags for SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Website Design</title>
+  <meta name="description" content="Professional website design, hosting and maintenance. Get a fast, secure website built with modern tech (React/Next) and reliable hosting." />
+  <meta name="keywords" content="website, web design, hosting, web development, React, Next.js, business website" />
+  <link rel="canonical" href="https://routinesoft.vercel.app/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Website Design" />
+  <meta property="og:description" content="Professional website design, hosting and maintenance. Fast, secure, SEO-ready websites." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://routinesoft.vercel.app/" />
+  <meta property="og:image" content="https://routinesoft.vercel.app/img/metatag3.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Website Design" />
+  <meta name="twitter:description" content="Professional website design, hosting and maintenance. Fast, secure, SEO-ready websites." />
+
+  <!-- JSON-LD (basic organization + website) to help search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Routine Soft",
+    "url": "https://routinesoft.vercel.app",
+    "logo": "https://routinesoft.vercel.app/img/logo.png",
+    "sameAs":["https://www.instagram.com/routinesoftofc/","https://www.facebook.com/routinesoft"]
+  }
+  </script>
+
+  <!-- Fonts (kept as in your original) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    /* Palette:
+       - Accent: #3aaaa8
+       - Secondary: #226160
+       - White: #ffffff
+       - Background: #000000
+    */
+    :root{
+      --bg: #000000;
+      --accent: #3aaaa8;
+      --secondary: #226160;
+      --white: #ffffff;
+      --container-max: 1200px;
+      --gap: 20px;
+    }
+
+    /* Base reset */
+    *{box-sizing: border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Montserrat", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+
+    /* Page wrapper with sidebar layout */
+    .page {
+      max-width: calc(var(--container-max) + 300px); /* leave room for sidebar */
+      margin: 0 auto;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1fr 320px; /* content + right sidebar */
+      gap: 28px;
+      align-items:start;
+    }
+
+    /* Main content container */
+    main {
+      max-width: var(--container-max);
+      width: 100%;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+      background: rgba(34,97,96,0.06); /* subtle tint of secondary */
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid rgba(34,97,96,0.18);
+      height: fit-content;
+      position: sticky;
+      top: 24px; /* sticky on large screens */
+    }
+    aside .sidebar h3{ margin:0 0 12px 0; color:var(--accent); font-size:18px;}
+    aside .news-item{ margin-bottom:12px; font-size:14px; color:var(--white); }
+    aside .news-item a{ color:var(--white); text-decoration:none; opacity:0.95; }
+    aside .news-item a:hover{ color:var(--accent); }
+
+    /* HERO (top section with two columns: left image, right text) */
+    .hero {
+      display:flex;
+      gap: 28px;
+      align-items:flex-start; /* top-aligned as requested */
+      margin-bottom: 28px;
+    }
+
+    .hero .hero-left, .hero .hero-right {
+      flex:1;
+    }
+
+    .hero-left{
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+    /* image container */
+    .hero-left img{
+      max-width:100%;
+      width: 420px;
+      height: auto;
+      border-radius: 12px;
+      border: 4px solid rgba(58,170,168,0.12);
+      object-fit: cover;
+      display:block;
+    }
+
+    /* hero text area (right) */
+    .hero-right h1{
+      font-size:32px;
+      margin:0 0 10px 0;
+      color: var(--accent);
+    }
+    .hero-right p.lead{
+      font-size:16px;
+      margin:0 0 18px 0;
+      color: #e6f6f4;
+    }
+
+    /* Form (FormSubmit) */
+    .lead-form{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top: 8px;
+    }
+    .lead-form input[type="text"],
+    .lead-form input[type="email"],
+    .lead-form input[type="tel"]{
+      padding:12px 14px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: var(--white);
+      outline:none;
+      min-width: 160px;
+      flex:1 1 160px;
+    }
+    .lead-form button{
+      background: var(--accent);
+      color: var(--bg);
+      padding:12px 18px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      flex: 0 0 auto;
+    }
+    .lead-form button:hover{ opacity:0.95; transform:translateY(-2px); transition: all .12s ease; }
+
+    /* Section below hero with descriptive text */
+    .intro-section{
+      margin: 22px 0 30px 0;
+      background: linear-gradient(180deg, rgba(34,97,96,0.04), transparent);
+      padding: 18px;
+      border-radius:10px;
+      border:1px solid rgba(34,97,96,0.12);
+    }
+    .intro-section h2{ color:var(--accent); margin:0 0 8px 0; font-size:20px; }
+    .intro-section p{ margin:0; color:#dfeff0; }
+
+    /* Services row (5 columns) */
+    .services-row{
+      display:flex;
+      gap:16px;
+      margin: 18px 0 28px 0;
+      flex-wrap:wrap;
+      align-items:flex-start; /* top aligned */
+    }
+    .service {
+      background: linear-gradient(180deg, rgba(34,97,96,0.06), rgba(58,170,168,0.02));
+      border: 1px solid rgba(58,170,168,0.12);
+      border-radius:10px;
+      padding:14px;
+      min-width:170px;
+      flex:1;              /* will shrink evenly */
+      color:var(--white);
+    }
+    .service h3{
+      margin:0 0 8px 0;
+      font-size:16px;
+      color: var(--accent);
+      text-align:center;
+    }
+    .service ul{ padding-left:16px; margin:0; list-style: none; }
+    .service li{ padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.04); font-size:14px; color:#eaf9f7; }
+
+    /* Cards / portfolio below */
+    .cards {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:16px;
+      margin-bottom: 36px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(34,97,96,0.03), transparent);
+      border-radius:10px;
+      padding:14px;
+      border:1px solid rgba(58,170,168,0.08);
+    }
+    .card img{ width:100%; border-radius:8px; object-fit:cover; }
+    .card p{ margin:8px 0 0 0; color:#eaf9f7; font-size:14px; }
+
+    /* Footer-ish call to action */
+    .cta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      background: linear-gradient(90deg, rgba(58,170,168,0.06), rgba(34,97,96,0.02));
+      padding:14px;
+      border-radius:10px;
+      border:1px solid rgba(58,170,168,0.08);
+      margin-bottom:40px;
+    }
+    .cta .cta-text{ color:#e9fffb; font-weight:600; }
+    .cta .cta-btn{
+      background: var(--accent);
+      color: var(--bg);
+      border:none;
+      padding:10px 16px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    /* Responsive: on small screens collapse sidebar under content and stack hero */
+    @media (max-width: 980px){
+      .page{ grid-template-columns: 1fr; padding:20px }
+      aside.sidebar{ position:relative; top:auto; order:2; margin-top:18px;}
+      .hero{ flex-direction: column-reverse; gap:18px; }
+      .hero-left img{ width:100%; max-width:720px; }
+    }
+
+    @media (max-width:520px){
+      .lead-form{ flex-direction:column; }
+      .lead-form input{ min-width: auto; width:100% }
+      .lead-form button{ width:100% }
+    }
+
+    /* small utilities */
+    a{ color:var(--accent); text-decoration:none }
+    h1,h2,h3{ line-height:1.15 }
+  </style>
+</head>
+<body>
+  <div class="page" role="document">
+    <!-- Main content -->
+    <main>
+      <!-- HERO: left image, right text (as you requested: left photo, right text) -->
+      <section class="hero" aria-label="Hero section">
+        <!-- LEFT: image -->
+        <div class="hero-left" aria-hidden="false">
+          <img src="/img/me.JPG" alt="Developer portrait — website design and hosting" />
+        </div>
+
+        <!-- RIGHT: headline, short pitch and form -->
+        <div class="hero-right">
+          <h1>Website</h1>
+          <p class="lead">We design modern, fast and SEO-friendly websites with secure hosting. Perfect for businesses, churches and startups.</p>
+
+          <!-- Simple contact form using FormSubmit (replace email if you want) -->
+          <form class="lead-form" action="https://formsubmit.co/stanleyandrade95@gmail.com" method="POST" aria-label="Contact form">
+            <input type="text" name="name" placeholder="Your name" required aria-label="Name">
+            <input type="email" name="email" placeholder="Email" required aria-label="Email">
+            <input type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit">Call me now</button>
+          </form>
+
+          <!-- quick service highlights -->
+          <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap">
+            <span style="background:var(--secondary); color:var(--white); padding:6px 8px; border-radius:6px; font-weight:600;">Fast Delivery</span>
+            <span style="background:rgba(58,170,168,0.12); color:var(--white); padding:6px 8px; border-radius:6px; font-weight:600;">SEO Ready</span>
+            <span style="background:rgba(255,255,255,0.03); color:var(--white); padding:6px 8px; border-radius:6px; font-weight:600;">Secure Hosting</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro / descriptive section under hero -->
+      <section class="intro-section" aria-label="About service">
+        <h2>What we deliver</h2>
+        <p>Complete website packages: responsive design, SSL, daily backups, performance optimization and on-page SEO. Built with modern stacks (HTML/CSS/JS, React/Next) and deployed on reliable hosting.</p>
+      </section>
+
+      <!-- Services (Website, Hosting, Mobile App, Software, Social Media) -->
+      <section aria-label="Services">
+        <div class="services-row">
+          <div class="service">
+            <h3>Website</h3>
+            <ul>
+              <li>Hosting included</li>
+              <li>1 domain for 1 year</li>
+              <li>Responsive design</li>
+              <li>SEO-ready pages</li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3>Hosting</h3>
+            <ul>
+              <li>High performance servers</li>
+              <li>Free SSL</li>
+              <li>Backups & monitoring</li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3>Mobile App</h3>
+            <ul>
+              <li>Android & iOS</li>
+              <li>Push notifications</li>
+              <li>Database & API</li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3>Software</h3>
+            <ul>
+              <li>Custom business software</li>
+              <li>Admin panels & dashboards</li>
+              <li>Secure auth & DB</li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3>Social Media</h3>
+            <ul>
+              <li>Daily posts & campaigns</li>
+              <li>Video & photo creation</li>
+              <li>Analytics & reporting</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio / examples -->
+      <section aria-label="Examples" style="margin-top:18px">
+        <h2 style="color:var(--accent); margin:0 0 12px 0">Selected projects</h2>
+        <div class="cards" aria-live="polite">
+          <div class="card">
+            <img src="/img/1.png" alt="Rara App screenshot" />
+            <p><strong>Rara App</strong> — Android & iOS app; React Native; MongoDB; Node.js.</p>
+          </div>
+          <div class="card">
+            <img src="/img/2.png" alt="Memorize Gifts screenshot" />
+            <p><strong>Memorize Gifts</strong> — Landing page & e-commerce; Vercel hosting.</p>
+          </div>
+          <div class="card">
+            <img src="/img/4.png" alt="CestSegTrabalho screenshot" />
+            <p><strong>CestSegTrabalho</strong> — School platform; React; Node.js; AWS.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to action -->
+      <section class="cta" role="region" aria-label="Call to action">
+        <div class="cta-text">
+          Need a website that works 24/7 and ranks on Google? Let's build it.
+        </div>
+        <div>
+          <a href="mailto:stanleyandrade95@gmail.com"><button class="cta-btn">Contact us</button></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- RIGHT SIDEBAR: news, internal and external links -->
+    <aside class="sidebar" aria-label="News and links">
+      <h3>News & Links</h3>
+
+      <div class="news-item">
+        <a href="/blog/seo-basics.html">SEO Basics: How to rank faster</a>
+        <div style="font-size:12px; opacity:0.8">Internal</div>
+      </div>
+
+      <div class="news-item">
+        <a href="https://developers.google.com/search/docs" target="_blank" rel="noopener">Google Search Docs</a>
+        <div style="font-size:12px; opacity:0.8">External</div>
+      </div>
+
+      <div class="news-item">
+        <a href="/contact.html">Request a quote</a>
+        <div style="font-size:12px; opacity:0.8">Internal</div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04); margin:12px 0">
+
+      <h3>Quick Links</h3>
+      <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
+        <a href="/services.html">All Services</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="https://routinesoft.vercel.app/rss.xml" target="_blank">RSS</a>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>

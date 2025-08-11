@@ -1,0 +1,62 @@
+
+.pricing-table {
+    max-width: 900px;
+    margin: auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .pricing-table th {
+    background-color: #fff;
+    font-size: 20px;
+  }
+
+  .pricing-table .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d2691e; /* laranja */
+    margin: 10px 0;
+  }
+
+  .pricing-table .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px 0;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .pricing-table .btn-outline {
+    background-color: transparent;
+    border: 1px solid green;
+    color: green;
+  }
+
+/* Listras: alterna fundo nas linhas do tbody */
+.pricing-table tbody tr:nth-child(odd) td {
+  background: #f9f9f9; /* cinza claro */
+}
+
+.pricing-table tbody tr:nth-child(even) td {
+  background: #ffffff; /* branco */
+}
+
+.pricing-table tbody tr td {
+  background: #ffffff; /* ou qualquer cor que quiser */
+}
+  .pricing-table tr:hover {
+    background-color: #f1f1f1;
+  }
+   /* Pequena interação nos botões */
+  .btn:hover{ opacity: .95; transform: translateY(-1px); transition: all .12s ease; }
+  .btn-outline:hover{ background: var(--green); color: #fff; transition: all .12s ease; }

@@ -23,10 +23,11 @@ body {
 }
 
 .col-a {
+  display: flex;
+  flex-direction: column;
     flex: 1;
-    margin-right: 20px;
-    align-items: start;
-    justify-content: start;
+    margin-right: 2px;
+    align-items: flex-start;
 }
 
 .div1home{
@@ -382,30 +383,53 @@ input[type="range"] {
   object-fit: cover;
 }
 
-.formsubmit{
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-}
-
-.inputformsubmit{
-  border: none;
-  border-radius: 10px;
-  padding: 8px;
-  margin: 2px;
-}
-
-.btnformsubmit{
+.btnservice{
   border: none;
   border-radius: 10px;
   padding: 8px;
   margin: 2px;
   width: auto;
-  background-color: #3aaaa8;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   cursor: pointer;
+}
+
+/* Form (FormSubmit) */
+.lead-form{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
   
+}
+.lead-form input[type="text"],
+.lead-form input[type="email"],
+.lead-form input[type="tel"]{
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--white);
+  outline:none;
+  min-width: 160px;
+}
+.lead-form button{
+  background: #3aaaa8;
+  color: #fff;
+  padding:12px 18px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  flex: 0 0 auto;
+}
+.lead-form button:hover{ opacity:0.95; transform:translateY(-2px); transition: all .12s ease; }
+
+.callmenow{
+  padding: 10px;
 }
 
 /* Responsivo para telas pequenas */
@@ -451,6 +475,7 @@ input[type="range"] {
     .col-a {
         margin-right: 0; /* Remove a margem direita em telas menores */
         margin-bottom: 20px; /* Adiciona margem inferior */
+        align-items: center;
     }
 
     .col-a h1 {
@@ -481,11 +506,8 @@ input[type="range"] {
     h2{
       text-align: center;
     }
-    .formsubmit{
-      display: flex;
-      flex-direction: column;
+    .lead-form{
       justify-content: center;
-      align-items: center;
     }
 }
 
