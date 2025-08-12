@@ -48,11 +48,21 @@
                 <!-- <a href="https://wa.me/5521977401773" class="whatsapp-button"><img class="img2" src="/img/zap.webp" alt=""></a> -->
 
                 <form class="lead-form" action="https://formsubmit.co/0b8bb20309a96264d0679e5c59f96a49" method="POST">
-                    <input type="text" class="inputformsubmit" name="name" placeholder="Name" required>
-                    <input type="email" class="inputformsubmit" name="email" placeholder="Your Email" required>
-                    <input type="tel" class="inputformsubmit" placeholder="Phone" required></input>
+                    <input type="text" class="inputformsubmit" name="Name" placeholder="Name" required>
+                    <input type="email" class="inputformsubmit" name="Email" placeholder="Your Email" required>
+                    <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required>
+                    
+                    <!-- Campos ocultos para localização e device -->
+                    <input type="hidden" name="Device" id="device">
+                    <input type="hidden" name="IP" id="ip">
+                    <input type="hidden" name="Country" id="country">
+                    <input type="hidden" name="Region" id="region">
+                    <input type="hidden" name="City" id="city">
+
                     <input type="hidden" name="_subject" value="Lead - RoutineSoft">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://routinesoft.vercel.app/thankyou.html">
+                    
                     <button type="submit">Call me now!</button>
                 </form>
 
@@ -270,10 +280,19 @@
         <form class="lead-form" action="https://formsubmit.co/0b8bb20309a96264d0679e5c59f96a49" method="POST">
             <input type="text" class="inputformsubmit" name="Name" placeholder="Name" required>
             <input type="email" class="inputformsubmit" name="Email" placeholder="Your Email" required>
-            <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required></input>
+            <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required>
+            
+            <!-- Campos ocultos para localização e device -->
+            <input type="hidden" name="Device" id="device">
+            <input type="hidden" name="IP" id="ip">
+            <input type="hidden" name="Country" id="country">
+            <input type="hidden" name="Region" id="region">
+            <input type="hidden" name="City" id="city">
+
             <input type="hidden" name="_subject" value="Lead - RoutineSoft">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://routinesoft.vercel.app/thankyou.html">
+            
             <button type="submit">Call me now!</button>
         </form>
 
@@ -300,4 +319,19 @@
     <script src="scripts.js"></script>
     <script src="/js/product.js"></script>
 </body>
+<script>
+    // Captura tipo de aparelho e navegador
+    document.getElementById("device").value = navigator.userAgent;
+
+    // Captura IP e localização usando ipapi.co
+    fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("ip").value = data.ip;
+            document.getElementById("country").value = data.country_name;
+            document.getElementById("region").value = data.region;
+            document.getElementById("city").value = data.city;
+        })
+        .catch(err => console.error("Erro ao obter localização:", err));
+</script>
 </html>
