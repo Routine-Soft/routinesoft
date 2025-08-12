@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
     flex: 1;
-    margin-right: 2px;
+    margin-left: 100px;
     align-items: flex-start;
 }
 
@@ -70,7 +70,7 @@ body {
 
 .col-b img {
     max-width: 70%;
-    border-radius: 200px;
+    border-radius: 230px;
 }
 
 /* Seção 2 - Cards de Produtos */
@@ -469,6 +469,7 @@ html {
 
     .col-a {
         margin-right: 0; /* Remove a margem direita em telas menores */
+        margin-left: 0;
         margin-bottom: 20px; /* Adiciona margem inferior */
         align-items: center;
     }
