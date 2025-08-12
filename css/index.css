@@ -5,21 +5,14 @@ body {
     font-style: normal;
     background-color: #000000;
     margin: 0;
-    padding: 0;
-}
-
-/* Seção 1 - Headline e Imagem */
-.section-1 {
-    
+    padding: 10px;
 }
 
 .row {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: center;
 }
 
 .col-a {
@@ -414,12 +407,12 @@ input[type="range"] {
   background: rgba(255,255,255,0.03);
   color: var(--white);
   outline:none;
-  min-width: 160px;
+  min-width: 260px;
 }
 .lead-form button{
   background: #3aaaa8;
   color: #fff;
-  padding:12px 18px;
+  padding:12px 28px;
   border-radius:8px;
   border:none;
   cursor:pointer;
@@ -436,20 +429,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Responsivo para telas pequenas */
-@media (max-width: 768px) {
-  .reels-section {
-    flex-direction: column;
-  }
-  .reels-iframe {
-    width: 100%;
-    height: auto;
-  }
-}
-
 
 /* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
+    .reels-section {
+    flex-direction: column;
+    }
+    .reels-iframe {
+      width: 100%;
+      height: auto;
+    }
     .product-container {
         padding: 15px;
     }
@@ -472,8 +461,10 @@ html {
     }
 
     .row {
+        display: flex;
         flex-direction: column; /* Muda a direção dos itens para coluna */
         align-items: center; /* Centraliza os itens */
+        justify-content: center;
     }
 
     .col-a {
@@ -513,7 +504,17 @@ html {
     .lead-form{
       justify-content: center;
     }
-}
+    .lead-form input[type="text"],
+    .lead-form input[type="email"],
+    .lead-form input[type="tel"]{
+      padding:12px 14px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: var(--white);
+      outline:none;
+      min-width: 330px;
+  }
 
 @media (max-width: 480px) {
     .col-a h1 {
@@ -538,4 +539,10 @@ html {
       justify-content: center;
       align-items: center;
     }
+    .row {
+        display: flex;
+        flex-direction: column; /* Muda a direção dos itens para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+}
 }
