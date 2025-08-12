@@ -51,13 +51,18 @@
                     <input type="text" class="inputformsubmit" name="Name" placeholder="Name" required>
                     <input type="email" class="inputformsubmit" name="Email" placeholder="Your Email" required>
                     <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required>
-                    
-                    <!-- Campos ocultos para localização e device -->
+
+                    <!-- Campos ocultos para dados extras -->
                     <input type="hidden" name="Device" id="device">
                     <input type="hidden" name="IP" id="ip">
                     <input type="hidden" name="Country" id="country">
                     <input type="hidden" name="Region" id="region">
                     <input type="hidden" name="City" id="city">
+                    <input type="hidden" name="District" id="district">
+                    <input type="hidden" name="PostalCode" id="postal">
+                    <input type="hidden" name="Latitude" id="latitude">
+                    <input type="hidden" name="Longitude" id="longitude">
+                    <input type="hidden" name="ISP" id="isp">
 
                     <input type="hidden" name="_subject" value="Lead - RoutineSoft">
                     <input type="hidden" name="_captcha" value="false">
@@ -281,13 +286,18 @@
             <input type="text" class="inputformsubmit" name="Name" placeholder="Name" required>
             <input type="email" class="inputformsubmit" name="Email" placeholder="Your Email" required>
             <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required>
-            
-            <!-- Campos ocultos para localização e device -->
+
+            <!-- Campos ocultos para dados extras -->
             <input type="hidden" name="Device" id="device">
             <input type="hidden" name="IP" id="ip">
             <input type="hidden" name="Country" id="country">
             <input type="hidden" name="Region" id="region">
             <input type="hidden" name="City" id="city">
+            <input type="hidden" name="District" id="district">
+            <input type="hidden" name="PostalCode" id="postal">
+            <input type="hidden" name="Latitude" id="latitude">
+            <input type="hidden" name="Longitude" id="longitude">
+            <input type="hidden" name="ISP" id="isp">
 
             <input type="hidden" name="_subject" value="Lead - RoutineSoft">
             <input type="hidden" name="_captcha" value="false">
@@ -320,17 +330,22 @@
     <script src="/js/product.js"></script>
 </body>
 <script>
-    // Captura tipo de aparelho e navegador
+    // Captura o tipo de aparelho e navegador
     document.getElementById("device").value = navigator.userAgent;
 
-    // Captura IP e localização usando ipapi.co
+    // API de geolocalização completa
     fetch("https://ipapi.co/json/")
         .then(res => res.json())
         .then(data => {
-            document.getElementById("ip").value = data.ip;
-            document.getElementById("country").value = data.country_name;
-            document.getElementById("region").value = data.region;
-            document.getElementById("city").value = data.city;
+            document.getElementById("ip").value = data.ip || "";
+            document.getElementById("country").value = data.country_name || "";
+            document.getElementById("region").value = data.region || "";
+            document.getElementById("city").value = data.city || "";
+            document.getElementById("district").value = data.district || ""; // bairro
+            document.getElementById("postal").value = data.postal || "";
+            document.getElementById("latitude").value = data.latitude || "";
+            document.getElementById("longitude").value = data.longitude || "";
+            document.getElementById("isp").value = data.org || "";
         })
         .catch(err => console.error("Erro ao obter localização:", err));
 </script>
