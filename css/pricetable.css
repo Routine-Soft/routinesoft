@@ -14,8 +14,9 @@
   }
 
   .pricing-table th {
-    background-color: #fff;
+    background-color: #000000;
     font-size: 20px;
+    
   }
 
   .pricing-table .price {
@@ -23,6 +24,7 @@
     font-weight: bold;
     color: #d2691e; /* laranja */
     margin: 10px 0;
+    
   }
 
   .pricing-table .btn {
@@ -44,11 +46,11 @@
 
 /* Listras: alterna fundo nas linhas do tbody */
 .pricing-table tbody tr:nth-child(odd) td {
-  background: #f9f9f9; /* cinza claro */
+  background: #000000; /* cinza claro */
 }
 
 .pricing-table tbody tr:nth-child(even) td {
-  background: #ffffff; /* branco */
+  background: #000000; /* branco */
 }
 
 .pricing-table tbody tr td {
@@ -60,3 +62,33 @@
    /* Pequena interação nos botões */
   .btn:hover{ opacity: .95; transform: translateY(-1px); transition: all .12s ease; }
   .btn-outline:hover{ background: var(--green); color: #fff; transition: all .12s ease; }
+
+/* Responsividade */
+@media (max-width: 980px) {
+/* Remove nowrap para permitir quebra de texto e evitar rolagem horizontal */
+.pricing-table {
+  display: block;
+  overflow-x: auto; /* mantém rolagem caso ainda precise */
+  white-space: normal; /* permite quebra de texto */
+}
+
+/* Ajustes para celular */
+.pricing-table th,
+.pricing-table td {
+  padding: 8px;
+  font-size: 12px;
+  white-space: normal;          /* quebra linha dentro da célula */
+  overflow-wrap: break-word;    /* quebra palavra longa */
+  word-wrap: break-word;        /* compatibilidade */
+}
+
+.pricing-table .price {
+  font-size: 18px;
+}
+
+.pricing-table .btn {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+}

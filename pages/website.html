@@ -8,6 +8,7 @@
   <meta name="description" content="Professional website design, hosting and maintenance. Get a fast, secure website built with modern tech (React/Next) and reliable hosting." />
   <meta name="keywords" content="website, web design, hosting, web development, React, Next.js, business website" />
   <link rel="canonical" href="https://routinesoft.vercel.app/" />
+  <link rel="stylesheet" href="/css/pricetable.css">
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Website Design" />
@@ -140,12 +141,23 @@
       color: #e6f6f4;
     }
 
+    .callmenow{
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+    }
+
     /* Form (FormSubmit) */
     .lead-form{
       display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap:10px;
       flex-wrap:wrap;
       margin-top: 8px;
+
     }
     .lead-form input[type="text"],
     .lead-form input[type="email"],
@@ -156,8 +168,9 @@
       background: rgba(255,255,255,0.03);
       color: var(--white);
       outline:none;
-      min-width: 160px;
-      flex:1 1 160px;
+      min-width: 100%;
+      max-width: 100%;
+
     }
     .lead-form button{
       background: var(--accent);
@@ -250,16 +263,51 @@
     /* Responsive: on small screens collapse sidebar under content and stack hero */
     @media (max-width: 980px){
       .page{ grid-template-columns: 1fr; padding:20px }
-      aside.sidebar{ position:relative; top:auto; order:2; margin-top:18px;}
+      aside.sidebar{ position:relative; top:auto; order:2; margin-top:18px; width: 100%;}
       .hero{ flex-direction: column-reverse; gap:18px; }
       .hero-left img{ width:100%; max-width:720px; }
-    }
-
-    @media (max-width:520px){
       .lead-form{ flex-direction:column; }
       .lead-form input{ min-width: auto; width:100% }
       .lead-form button{ width:100% }
-    }
+        
+      .services-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .service {
+        min-width: auto;
+      }
+
+        .lead-form {
+          flex-direction: column;
+          max-width: 100%;
+        }
+        .lead-form input {
+          min-width: auto;
+          width: 100%;
+        }
+        .lead-form button {
+          width: 100%;
+        }
+          .hero-right h1 {
+          font-size: 26px;
+        }
+        .hero-right p.lead {
+          font-size: 14px;
+        }
+        .cta {
+          flex-direction: column;
+          text-align: center;
+        }
+        .cta .cta-btn {
+          width: 100%;
+          margin-top: 10px;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+}
 
     /* small utilities */
     a{ color:var(--accent); text-decoration:none }
@@ -276,7 +324,7 @@
       <section class="hero" aria-label="Hero section">
         <!-- LEFT: image -->
         <div class="hero-left" aria-hidden="false">
-          <img src="/img/me.JPG" alt="Developer portrait — website design and hosting" />
+          <img src="/img/Website.png" alt="Developer portrait — website design and hosting" />
         </div>
 
         <!-- RIGHT: headline, short pitch and form -->
@@ -285,29 +333,173 @@
           <p class="lead">We design modern, fast and SEO-friendly websites with secure hosting. Perfect for businesses, churches and startups.</p>
 
           <!-- Simple contact form using FormSubmit (replace email if you want) -->
-          <form class="lead-form" action="https://formsubmit.co/stanleyandrade95@gmail.com" method="POST" aria-label="Contact form">
-            <input type="text" name="name" placeholder="Your name" required aria-label="Name">
-            <input type="email" name="email" placeholder="Email" required aria-label="Email">
-            <input type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone">
-            <input type="hidden" name="_captcha" value="false">
-            <button type="submit">Call me now</button>
+          <form class="lead-form" action="https://formsubmit.co/0b8bb20309a96264d0679e5c59f96a49" method="POST">
+                    <input type="text" class="inputformsubmit" name="Name" placeholder="Name" required>
+                    <input type="email" class="inputformsubmit" name="Email" placeholder="Your Email" required>
+                    <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required>
+
+                    <!-- Campos ocultos para dados extras -->
+                    <input type="hidden" name="Device" id="device">
+                    <input type="hidden" name="IP" id="ip">
+                    <input type="hidden" name="Country" id="country">
+                    <input type="hidden" name="Region" id="region">
+                    <input type="hidden" name="City" id="city">
+                    <input type="hidden" name="District" id="district">
+                    <input type="hidden" name="PostalCode" id="postal">
+
+                    <input type="hidden" name="_subject" value="Lead - RoutineSoft">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://routinesoft.vercel.app/pages/thankyou.html">
+                    
+                    <button type="submit">Call me now!</button>
           </form>
 
           <!-- quick service highlights -->
-          <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap">
+          <!-- <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap">
             <span style="background:var(--secondary); color:var(--white); padding:6px 8px; border-radius:6px; font-weight:600;">Fast Delivery</span>
             <span style="background:rgba(58,170,168,0.12); color:var(--white); padding:6px 8px; border-radius:6px; font-weight:600;">SEO Ready</span>
             <span style="background:rgba(255,255,255,0.03); color:var(--white); padding:6px 8px; border-radius:6px; font-weight:600;">Secure Hosting</span>
-          </div>
+          </div> -->
         </div>
       </section>
 
       <!-- Intro / descriptive section under hero -->
       <section class="intro-section" aria-label="About service">
-        <h2>What we deliver</h2>
+        <h2>Website: What we deliver</h2>
         <p>Complete website packages: responsive design, SSL, daily backups, performance optimization and on-page SEO. Built with modern stacks (HTML/CSS/JS, React/Next) and deployed on reliable hosting.</p>
       </section>
 
+<section>
+        <div class="container">
+  <!-- Tabela com 3 colunas: feature | plano A | plano B -->
+  <table class="pricing-table" role="table" aria-label="Tabela de preços">
+    <thead>
+      <tr>
+        <!-- coluna de labels (vazia no header) -->
+        <th class="feature-col" aria-hidden="true"></th>
+
+        <!-- Plano Economy -->
+        <th>
+          <div class="plan-header-area">
+            <div class="plan-title">Basic Website</div>
+            <div class="price">$400</div>
+            <a class="btn" href="#lead-form">GET STARTED</a>
+            <!-- <a class="btn-outline" href="#" style="margin-top:10px;">Check Demos!</a> -->
+          </div>
+        </th>
+
+        <!-- Plano Business -->
+        <th>
+          <div class="plan-header-area">
+            <div class="plan-title">Business Website</div>
+            <div class="price">$500</div>
+            <a class="btn" href="#lead-form">GET STARTED</a>
+            <!-- <a class="btn-outline" href="#" style="margin-top:10px;">Check Demos!</a> -->
+          </div>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- Lista de features (coluna 1) + valores dos planos -->
+      <tr>
+        <td class="feature">Development</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Web Hosting</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">24/7 Support</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+
+
+      <tr>
+        <td class="feature">1 Domain Name</td>
+        <td>❌</td>
+        <td>✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">100 Subdomain</td>
+        <td>❌</td>
+        <td>✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Business Email</td>
+        <td>❌</td>
+        <td>✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Updates</td>
+        <td>❌</td>
+        <td>✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">SEO</td>
+        <td>❌</td>
+        <td>✅</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Annual renewal</td>
+        <td>$200 once a year</td>
+        <td>$200 once a year</td>
+      </tr>
+
+      <tr>
+        <td class="feature">Platform</td>
+        <td>HTML CSS JS React Next</td>
+        <td>HTML CSS JS React Next</td>
+      </tr>
+
+      <!-- Linha final com botão (rodapé dos planos) -->
+      <tr>
+        <td class="feature" aria-hidden="true"></td>
+        <td><a class="btn plan-cta" href="#lead-form">GET STARTED</a></td>
+        <td><a class="btn plan-cta" href="#lead-form">GET STARTED</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </section>
+
+<section class="callmenow" id="lead-form">
+          <h2 class="experiencia">Call me now!</h2>
+        <form class="lead-form" action="https://formsubmit.co/0b8bb20309a96264d0679e5c59f96a49" method="POST">
+            <input type="text" class="inputformsubmit" name="Name" placeholder="Name" required>
+            <input type="email" class="inputformsubmit" name="Email" placeholder="Your Email" required>
+            <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required>
+
+            <!-- Campos ocultos para dados extras -->
+            <input type="hidden" name="Device" id="device">
+            <input type="hidden" name="IP" id="ip">
+            <input type="hidden" name="Country" id="country">
+            <input type="hidden" name="Region" id="region">
+            <input type="hidden" name="City" id="city">
+            <input type="hidden" name="District" id="district">
+            <input type="hidden" name="PostalCode" id="postal">
+
+            <input type="hidden" name="_subject" value="Lead - RoutineSoft">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://routinesoft.vercel.app/pages/thankyou.html">
+            
+            <button type="submit">GET STARTED</button>
+        </form>
+</section>
+
+        
+    <section class="callmenow">
       <!-- Services (Website, Hosting, Mobile App, Software, Social Media) -->
       <section aria-label="Services">
         <div class="services-row">
@@ -423,4 +615,24 @@
   <div id="footer-container"></div>
   <script src="/component/footer.js"></script>
 </body>
+<script>
+    // Captura o tipo de aparelho e navegador
+    document.getElementById("device").value = navigator.userAgent;
+
+    // API de geolocalização completa
+    fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("ip").value = data.ip || "";
+            document.getElementById("country").value = data.country_name || "";
+            document.getElementById("region").value = data.region || "";
+            document.getElementById("city").value = data.city || "";
+            document.getElementById("district").value = data.district || ""; // bairro
+            document.getElementById("postal").value = data.postal || "";
+            document.getElementById("latitude").value = data.latitude || "";
+            document.getElementById("longitude").value = data.longitude || "";
+            document.getElementById("isp").value = data.org || "";
+        })
+        .catch(err => console.error("Erro ao obter localização:", err));
+</script>
 </html>
