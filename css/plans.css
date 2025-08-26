@@ -83,3 +83,71 @@ h1{
   .cta-row { flex-direction: column; align-items: stretch; }
   .pay-now { width: 100%; }
 }
+
+.live-chat-btn {
+  background: linear-gradient(90deg,#00ac69,#01f195);
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+}
+.live-chat-btn:hover { transform: translateY(-2px); transition: .14s ease; }
+
+.contact-link {
+  display: inline-flex;
+  gap:8px;
+  align-items:center;
+  text-decoration:none;
+  color: #fff;
+  padding:8px 10px;
+  border-radius:8px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Mini chat (shortcode) */
+.mini-chat {
+  width: 320px;
+  max-width: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+.mini-chat:focus { outline: 2px solid rgba(1,172,105,0.25); }
+
+.mini-chat-header {
+  padding: 10px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  background: rgba(0,0,0,0.25);
+}
+.mini-dot {
+  width:10px; height:10px; border-radius:50%; background:#01f195; display:inline-block;
+  margin-bottom:4px;
+}
+.mini-status { font-size: 0.75rem; color: #cfeee3; opacity:0.9; }
+
+.mini-chat-body { padding: 12px; }
+.mini-msg { margin:0 0 10px 0; color:#dbeee6; line-height:1.3; }
+.mini-chat-cta {
+  display:inline-block;
+  background:#00ac69;
+  color:#000;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:700;
+}
+@media (max-width:720px){
+  .mini-chat { width: 100%; }
+}

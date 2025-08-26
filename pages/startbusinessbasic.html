@@ -56,32 +56,44 @@
     </p>
     <div class="cta-row">
       <!-- This button triggers JS to create a Stripe Checkout session -->
-      <button id="pay-now" class="pay-now">Pay Now</button>
+      <a href=""><button id="pay-now" class="pay-now">Pay Now</button></a>
       <small class="trust">Secure checkout • Powered by Stripe</small>
     </div>
   </div>
 
-  <!-- OPTION 2: Contact First -->
-  <div class="option contact-option">
-    <h3>Option 2 — Contact Us First</h3>
-    <p>
-      Prefer to talk before you buy? Send an email, or message us on Instagram or Facebook — we’ll answer within one business day
-      and can schedule a quick call if needed.
-    </p>
+<!-- OPTION 2: Contact First (substitua a seção anterior por esta) -->
+<div class="option contact-option">
+  <h3>Option 2 — Contact Us First</h3>
+  <p>
+    Send us a message on the live chat, or contact us by email or social media — we’ll reply within one business day.
+  </p>
 
-    <div class="contact-icons">
-      <a href="mailto:contact@routinesoft.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.instagram.com/routinesoftofc/" target="_blank" rel="noopener noreferrer" title="Instagram">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://www.facebook.com/routinesoft" target="_blank" rel="noopener noreferrer" title="Facebook Messenger">
-        <i class="fab fa-facebook-messenger"></i> Messenger
-      </a>
+  <!-- Live chat CTA -->
+  <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:12px;">
+    <button id="open-chat-btn" class="live-chat-btn" aria-label="Open live chat">
+      <i class="fas fa-comments" style="margin-right:8px"></i> Live Chat
+    </button>
+    <a href="mailto:contact@routinesoft.com" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+    <a href="https://www.instagram.com/routinesoftofc/" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.facebook.com/routinesoft" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fab fa-facebook-messenger"></i> Messenger</a>
+  </div>
+
+  <!-- Mini chat shortcode / janelinha (clicável) -->
+  <div id="mini-chat" class="mini-chat" role="button" tabindex="0" aria-label="Open live chat">
+    <div class="mini-chat-header">
+      <span class="mini-dot"></span>
+      <strong>Live Chat</strong>
+      <small class="mini-status">We usually reply within 1 business day</small>
+    </div>
+    <div class="mini-chat-body">
+      <p class="mini-msg">Hi! Click here to start a conversation with our team.</p>
+      <div class="mini-chat-cta">Start chat →</div>
     </div>
   </div>
+</div>
 </section>
 
-        <!-- <form class="lead-form" action="https://formsubmit.co/contact@routinesoft.com" method="POST">
+        <!-- <form class="lead-form" action="https://formsubmit.co/527894bd84d24a9d8d96773ae35a4128" method="POST">
             <input type="text" class="inputformsubmit" name="Name" placeholder="Name" required>
             <input type="email" class="inputformsubmit" name="Email" placeholder="Your Email" required>
             <input type="tel" class="inputformsubmit" name="Tel" placeholder="Phone" required>
@@ -129,5 +141,41 @@
             })();
         </script>
         <!--End of Tawk.to Script-->
+
+        <!-- JS para abrir o Tawk chat (cole DEPOIS do Tawk script) -->
+        <script>
+        // abre o Tawk chat de forma resiliente (tenta enquanto Tawk não carregar)
+        function openTawkChat() {
+            const tryOpen = () => {
+            if (window.Tawk_API && typeof window.Tawk_API.maximize === 'function') {
+                window.Tawk_API.maximize();
+                return true;
+            }
+            return false;
+            };
+
+            if (!tryOpen()) {
+            let tries = 0;
+            const interval = setInterval(() => {
+                tries++;
+                if (tryOpen() || tries > 40) clearInterval(interval); // ~4s
+            }, 100);
+            }
+        }
+
+        // Evento do botão e do mini-chat
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('open-chat-btn');
+            if (btn) btn.addEventListener('click', (e) => { e.preventDefault(); openTawkChat(); });
+
+            const mini = document.getElementById('mini-chat');
+            if (mini) {
+            // abrir no click ou Enter/Space para acessibilidade
+            mini.addEventListener('click', openTawkChat);
+            mini.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openTawkChat(); }});
+            }
+        });
+        </script>
+
 </body>
 </html>
