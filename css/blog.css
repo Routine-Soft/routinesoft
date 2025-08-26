@@ -1,0 +1,65 @@
+/* blog.css — styles for the blog article (keep under /css/blog.css) */
+
+/* Base */
+:root{
+  --bg: #000;
+  --text: #fff;
+  --muted: #cfd8da;
+  --panel: rgba(255,255,255,0.03);
+  --accent-start: #00ac69;
+  --accent-end: #01f195;
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:28px 48px;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Montserrat",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+/* Layout */
+.blog-container{
+  max-width:980px;
+  margin:18px auto 80px;
+}
+
+/* Post */
+.post-header{ text-align:center; margin-bottom:18px; }
+.post-header h1{ margin:6px 0; font-size:2rem; letter-spacing:-0.02em; }
+.byline{ color:var(--muted); margin:0 0 12px; font-size:0.95rem; }
+
+.hero{ margin:12px auto; max-width:100%; }
+.hero img{ width:100%; height:auto; border-radius:8px; display:block; }
+.hero figcaption{ color:var(--muted); font-size:0.9rem; margin-top:8px; }
+
+/* Content */
+.post-content{ margin-top:16px; background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); }
+.post-content .lead { color:var(--muted); margin-bottom:14px; }
+.post-content h2 { color:#e6fff6; margin-top:18px; margin-bottom:8px; font-size:1.15rem; }
+.post-content h3 { color:#e6fff6; margin-top:12px; margin-bottom:8px; font-size:1rem; }
+.post-content p { color:var(--muted); margin:0 0 12px 0; }
+.post-content ul, .post-content ol { margin:0 0 12px 20px; color:var(--muted); }
+.post-content li { margin-bottom:8px; }
+
+/* Links and buttons */
+a { color: var(--accent-start); text-decoration: underline; }
+a.btn { display:inline-block; padding:10px 14px; border-radius:10px; background: linear-gradient(90deg,var(--accent-start),var(--accent-end)); color:#000; font-weight:700; text-decoration:none; margin-right:8px; }
+a.btn.outline { background: transparent; color:var(--text); border:1px solid rgba(255,255,255,0.06); padding:10px 14px; }
+
+/* References */
+.references{ margin-top:18px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.03); color:var(--muted); }
+.references a { color: var(--accent-start); }
+
+/* Responsive */
+@media (max-width:720px){
+  body{ padding:18px; }
+  .blog-container{ margin:8px auto 40px; }
+  .post-header h1{ font-size:1.5rem; }
+  a.btn{ width:100%; text-align:center; }
+  a.btn.outline{ width:100%; margin-top:8px; }
+}
