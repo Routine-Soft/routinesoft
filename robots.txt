@@ -1,0 +1,9 @@
+User-agent: *
+Disallow:
+
+# Location of sitemap
+Sitemap: https://www.routinesoft.com/sitemap.xml
+
+# Optional: block admin or dev paths
+# Disallow: /admin/
+# Disallow: /private/

@@ -1,51 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home -->
+  <url>
+    <loc>https://www.routinesoft.com/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
 
-	<!-- Página principal -->
-    <url>
-        <loc>https://mercadinhodev.vercel.app/</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
+  <!-- Support page -->
+  <url>
+    <loc>https://www.routinesoft.com/pages/support.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 
-    <!-- Blog -->
-    <url>
-        <loc>https://mercadinhodev.vercel.app/blog/D-U-N-S.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
-    <url>
-        <loc>https://mercadinhodev.vercel.app/blog/duns-number.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
+  <!-- Blog index -->
+  <url>
+    <loc>https://www.routinesoft.com/blog/</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 
-    <!-- Produtos -->
-    <url>
-        <loc>https://mercadinhodev.vercel.app/produtos/bancodedados.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
-    <url>
-        <loc>https://mercadinhodev.vercel.app/produtos/conserto.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
-    <url>
-        <loc>https://mercadinhodev.vercel.app/produtos/dunsnumber.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
-    <url>
-        <loc>https://mercadinhodev.vercel.app/produtos/paginadevendavsl.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
-    <url>
-        <loc>https://mercadinhodev.vercel.app/produtos/portfolio.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
-    <url>
-        <loc>https://mercadinhodev.vercel.app/produtos/quiz.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
-    <url>
-        <loc>https://mercadinhodev.vercel.app/produtos/siteinsitucional.html</loc>
-        <lastmod>2025-02-17</lastmod>
-    </url>
+  <!-- Blog posts (exemplos) -->
+  <url>
+    <loc>https://www.routinesoft.com/blog/how-to-start-a-business.html</loc>
+    <lastmod>2025-08-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Adicione aqui outras URLs... -->
 </urlset>
