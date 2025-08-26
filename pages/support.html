@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Routine Soft</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="/css/support.css">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/98ec56a621.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Support — contact our team through live chat.">
+  <meta name="robots" content="index,follow">
+</head>
+<body>
+  <!-- Header placeholder (optional) -->
+  <div id="header-container"></div>
+  <script src="/component/header.js"></script>
+
+  <main class="container" role="main">
+    <section class="hero">
+      <h1>Support</h1>
+      <p class="lead">
+        Our primary support channel is the live chat on this page. For the fastest help, please start a conversation using the chat widget — our team is standing by to assist you.
+      </p>
+
+      <!-- Quick facts / SLA -->
+      <ul class="support-list" aria-hidden="false">
+        <li><strong>Live chat:</strong> Fastest way to get help — available here on the site.</li>
+        <li><strong>Email:</strong> contact@routinesoft.com — response within 1 business day.</li>
+        <li><strong>Phone:</strong> We do not offer phone support. Chat offers better, trackable support.</li>
+      </ul>
+
+      <!-- Primary CTA: open chat -->
+      <div class="cta-row">
+        <button id="open-chat-btn" class="primary-cta" aria-label="Open live chat">
+          <i class="fas fa-comments" aria-hidden="true"></i>
+          Start Live Chat
+        </button>
+
+        <!-- Secondary contact options -->
+        <a class="secondary-cta" href="mailto:contact@routinesoft.com">
+          <i class="fas fa-envelope" aria-hidden="true"></i> Email Us
+        </a>
+      </div>
+
+      <!-- Mini explanation box for users who prefer short copy -->
+      <div class="mini-info" role="region" aria-label="How support works">
+        <p><strong>How it works:</strong> Click <em>Start Live Chat</em>, describe your issue and an agent will respond. If your request requires follow-up, we'll track it and send updates by email.</p>
+      </div>
+    </section>
+
+    <!-- FAQ / quick answers -->
+    <section class="faq">
+      <h2>Common questions</h2>
+
+      <div class="faq-item">
+        <h3>What hours is chat available?</h3>
+        <p>Our team monitors the chat during business hours. If you contact us outside those hours, leave a message and we'll reply as soon as we're back online.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>I need billing or account help — can you call me?</h3>
+        <p>We don’t provide phone support; please use the chat so we can securely authenticate your account and keep a support record.</p>
+      </div>
+    </section>
+
+    <!-- Social/contact icons -->
+    <footer class="support-footer" role="contentinfo">
+      <div class="contact-icons">
+        <a href="mailto:contact@routinesoft.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/routinesoftofc/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/routinesoft" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-messenger"></i></a>
+      </div>
+      <p class="small">Prefer a transcript? After your chat, you can request the conversation transcript to be sent to your email.</p>
+    </footer>
+  </main>
+
+  <!-- Footer placeholder (optional) -->
+  <div id="footer-container"></div>
+  <script src="/component/footer.js"></script>
+
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    // Tawk.to embed (replace the src id with your actual property ID if different)
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68ad3a4e429f5919255f1e37/1j3ianh6d';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
+
+  <!-- JS to open Tawk chat programmatically (resilient) -->
+  <script>
+    // Try to maximize the Tawk widget. If not loaded yet, retry for a short while.
+    function openTawkChat() {
+      function tryOpen() {
+        try {
+          if (window.Tawk_API && typeof window.Tawk_API.maximize === 'function') {
+            window.Tawk_API.maximize();
+            // focus the chat input when possible
+            if (typeof window.Tawk_API.focus === 'function') {
+              window.Tawk_API.focus();
+            }
+            return true;
+          }
+        } catch (e) {
+          // ignore and retry
+        }
+        return false;
+      }
+
+      if (!tryOpen()) {
+        let attempts = 0;
+        const interval = setInterval(() => {
+          attempts++;
+          if (tryOpen() || attempts > 50) { // ~5s total
+            clearInterval(interval);
+          }
+        }, 100);
+      }
+    }
+
+    // Attach event listeners
+    document.addEventListener('DOMContentLoaded', function () {
+      const btn = document.getElementById('open-chat-btn');
+      if (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          openTawkChat();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

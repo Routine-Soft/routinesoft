@@ -13,6 +13,11 @@ h1{
     text-align: center;
 }
 
+.col-b {
+  display: flex;
+  justify-content: center;
+}
+
 .purchase-options {
   max-width: 920px;
   margin: 36px auto;
