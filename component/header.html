@@ -1,6 +1,6 @@
 <!-- header.html -->
 <header class="header">
-    <a href="/"><div class="logo">Routine Soft</div></a>
+    <a href="/"><img src="/img/newlogo.svg" alt=""></a>
     <nav class="nav-menu">
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
@@ -11,28 +11,35 @@
             <a href="/" title="Gmail">
                 <!-- <i class="fas fa-envelope" style="font-size: 32px; color: #D44638;"></i> -->
             <p class="p-navlinks">Home</p>
-            </a>            
-            <a href="/pages/mobileapp.html" title="Gmail">
+            </a> 
+            <a href="/" title="Gmail">
                 <!-- <i class="fas fa-envelope" style="font-size: 32px; color: #D44638;"></i> -->
+            <p class="p-navlinks">Plans</p>
+            </a> 
+            <a href="/" title="Gmail">
+                <!-- <i class="fas fa-envelope" style="font-size: 32px; color: #D44638;"></i> -->
+            <p class="p-navlinks">Services</p>
+            </a> 
+            <a href="/" title="Gmail">
+                <!-- <i class="fas fa-envelope" style="font-size: 32px; color: #D44638;"></i> -->
+            <p class="p-navlinks">Blog</p>
+            </a>
+            <!-- <a href="/pages/mobileapp.html" title="Gmail">
                  <p class="p-navlinks">Mobile App</p>
             </a>
             <a href="/pages/website.html" rel="noopener noreferrer" title="Instagram">
-                <!-- <i class="fab fa-instagram" style="font-size: 32px; color: #E1306C;"></i> -->
                  <p class="p-navlinks">Website</p>
             </a>
             <a href="#contact" rel="noopener noreferrer" title="Facebook Messenger">
-                <!-- <i class="fab fa-facebook-messenger" style="font-size: 32px; color: #0084FF;"></i> -->
                  <p class="p-navlinks">Hosting</p>
             </a>
 
             <a href="#contact" rel="noopener noreferrer" title="Google Meet">
-                <!-- <i class="fas fa-video" style="font-size: 32px; color: #34A853;"></i> -->
                  <p class="p-navlinks">Software</p>
             </a>
             <a href="#contact" rel="noopener noreferrer" title="Google Meet">
-                <!-- <i class="fas fa-video" style="font-size: 32px; color: #34A853;"></i> -->
                  <p class="p-navlinks">Social Media</p>
-            </a>
+            </a> -->
         </ul>
     </nav>
 </header>
@@ -46,17 +53,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 
 .logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    background-image: linear-gradient(90deg, #3aaaa8, #226160); /* Gradiente de duas cores */
-    -webkit-background-clip: text; /* Faz com que o gradiente afete o texto */
-    color: transparent; /* Define o texto como transparente para mostrar o gradiente */
-    font-family: 'Rajdhani', sans-serif;
-
+    
 }
 
 a{
@@ -115,7 +115,6 @@ a{
         background-color: #000;
         width: 100%;
         display: none;
-
     }
 
     .nav-menu ul.show {
