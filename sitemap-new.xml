@@ -16,20 +16,12 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- Blog index -->
-  <url>
-    <loc>https://www.routinesoft.com/blog/</loc>
-    <lastmod>2025-08-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
   <!-- Blog posts (exemplos) -->
   <url>
     <loc>https://www.routinesoft.com/blog/how-to-start-a-business.html</loc>
     <lastmod>2025-08-26</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.70</priority>
+    <priority>0.80</priority>
   </url>
 
   <!-- Adicione aqui outras URLs... -->
