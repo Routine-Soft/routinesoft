@@ -93,6 +93,31 @@ body {
 /* END col-b */
 /* END SECTION 1 */
 
+/* START SECTION 1_4 */
+/* Headline */
+.section-1_4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.h2-section-1_4 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.section-1_4 p {
+  font-weight: 400;
+  white-space: normal;  /* permite quebra normal */
+  overflow-wrap: break-word; /* previne estouro */
+  text-align: center;
+  margin: 10px 150px 0px 150px;
+}
+/* END SECTION 1_4 */
+
 /* START SECTION 1_5 */
 /* Headline */
 .section-1_5 {
@@ -131,7 +156,7 @@ body {
 }
 
 .card {
-    background-color: #133636;
+    background-color: #003d26;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
@@ -219,6 +244,10 @@ html {
 @media (max-width: 720px) {
     body {
       padding: 0px 10px 0px 10px;
+    }
+
+    .section-1_4 p {
+      margin: 10px 0px 0px 0px;
     }
 
     .section-1_5 p {
