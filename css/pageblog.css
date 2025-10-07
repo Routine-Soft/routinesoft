@@ -55,6 +55,60 @@ a.btn.outline { background: transparent; color:var(--text); border:1px solid rgb
 .references{ margin-top:18px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.03); color:var(--muted); }
 .references a { color: var(--accent-start); }
 
+/* Banner fixo */
+.sticky-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #003d26;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 14px 20px;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 1200px; /* Centraliza e limita largura */
+  width: 100%;
+}
+
+/* Imagem */
+.banner-content img {
+  width: 80px;   /* tamanho fixo desktop */
+  height: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* Texto */
+.banner-content span {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Botão */
+.banner-btn {
+  background: #00ac69;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.banner-btn:hover {
+  background: #01f195;
+}
+
 /* Responsive */
 @media (max-width:720px){
   body{ padding:18px; }
@@ -62,4 +116,6 @@ a.btn.outline { background: transparent; color:var(--text); border:1px solid rgb
   .post-header h1{ font-size:1.5rem; }
   a.btn{ width:100%; text-align:center; }
   a.btn.outline{ width:100%; margin-top:8px; }
+
+
 }

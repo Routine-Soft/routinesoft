@@ -1,0 +1,82 @@
+/* Global */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 20px 40px;
+    color: #fff;
+}
+
+/* Cabeçalho */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header .title {
+    font-size: 2.5rem;
+    background-image: linear-gradient(90deg, #00ac69, #01f195);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+}
+
+.section-header .subtitle {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+/* Container de cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    background-color: #003d26;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    margin: 15px;
+    color: #fff;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin: 0 15px 15px;
+    color: #ddd;
+}
+
+/* Links dentro do card */
+.card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
+    body {
+        padding: 10px;
+    }
+    .section-header .title {
+        font-size: 2rem;
+    }
+}
