@@ -96,26 +96,63 @@ body {
 /* START SECTION 1_4 */
 /* Headline */
 .section-1_4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  justify-content: center;
+  padding: 60px 20px;
+  color: #fff;
 }
 
 .h2-section-1_4 {
-  color: #fff;
-  text-align: center;
-  margin-bottom: -10px;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
-.section-1_4 p {
-  font-weight: 400;
-  white-space: normal;  /* permite quebra normal */
-  overflow-wrap: break-word; /* previne estouro */
-  text-align: center;
-  margin: 10px 150px 0px 150px;
+/* container para alinhar os botões */
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* espaçamento entre botões */
 }
+
+/* estilo base dos botões */
+.button-service {
+  background: linear-gradient(135deg, #00ac69, #00e6a0);
+  color: #fff;
+  padding: 16px 0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 260px; /* todos terão o mesmo tamanho */
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* efeito de brilho sutil no hover */
+.button-service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+}
+
+.button-service:hover::before {
+  left: 100%;
+}
+
+.button-service:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 230, 160, 0.4);
+}
+
 /* END SECTION 1_4 */
 
 /* START SECTION 1_5 */
@@ -315,5 +352,8 @@ html {
       color: var(--white);
       outline:none;
       min-width: 330px;
-  }
+      }
+      .button-service {
+        width: 100%;
+      }
 }
