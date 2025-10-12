@@ -27,7 +27,7 @@ function initAdsCarousel(root = document) {
     slides[current].classList.remove("active");
     current = (current + 1) % slides.length;
     slides[current].classList.add("active");
-  }, 5000); // troca a cada 5s
+  }, 3000); // troca a cada 5s
 }
 
 document.addEventListener("DOMContentLoaded", loadAds);
