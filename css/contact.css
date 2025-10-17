@@ -45,7 +45,7 @@ h1{
   margin-bottom: 16px;
 }
 
-.option h3 { margin: 0 0 8px 0; color: #e6fff6; }
+.option h3 { margin: 0 0 8px 0; color: #e6fff6; text-align: center;}
 .option p { color: #cfd8da; margin: 0 0 12px 0; line-height: 1.5; }
 
 .cta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
