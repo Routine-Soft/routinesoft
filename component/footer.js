@@ -1,11 +1,10 @@
-// header.js
-function loadHeader() {
-    fetch("/component/footer.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("footer-container").innerHTML = data;
-        })
-        .catch(error => console.error("Erro ao carregar o footer:", error));
+function loadFooter() {
+  fetch("/component/footer.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("footer-container").innerHTML = data;
+    })
+    .catch((err) => console.error("Erro ao carregar o footer:", err));
 }
 
-document.addEventListener("DOMContentLoaded", loadHeader);
+document.addEventListener("DOMContentLoaded", loadFooter);

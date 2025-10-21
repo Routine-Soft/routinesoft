@@ -1,17 +1,16 @@
-// header.js
 function loadHeader() {
-    fetch("/component/header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("header-container").innerHTML = data;
-        })
-        .catch(error => console.error("Erro ao carregar o header:", error));
+  fetch("/component/header.html")
+    .then((res) => res.text())
+    .then((data) => {
+      document.getElementById("header-container").innerHTML = data;
+    })
+    .catch((err) => console.error("Erro ao carregar o header:", err));
 }
 
 document.addEventListener("DOMContentLoaded", loadHeader);
 
-// Função para abrir e fechar o menu hamburguer no mobile
+// Abre e fecha o menu mobile
 function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
+  const nav = document.getElementById("mobile-nav");
+  nav.classList.toggle("show");
 }

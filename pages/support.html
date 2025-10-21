@@ -5,105 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Support — Routine Soft</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="canonical" href="https://www.routinesoft.com/pages/support.html" />
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="/css/support.css">
 
-  <!-- Favicon padrão -->
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/icon/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/img/icon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/img/icon/android-chrome-512x512.png">
-
-  <!-- Apple Touch Icon (iPhone/iPad quando adiciona à tela inicial) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/apple-touch-icon.png">
-
-  <!-- Favicon padrão para compatibilidade -->
-  <link rel="shortcut icon" href="/img/icon/favicon.ico">
-
-  <!-- Icons -->
+  <!-- FontAwesome Icons -->
   <script src="https://kit.fontawesome.com/98ec56a621.js" crossorigin="anonymous"></script>
+
+  <!-- Meta -->
   <meta name="description" content="Support — contact our team through live chat.">
   <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.routinesoft.com/pages/support.html" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/icon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/icon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/img/icon/favicon.ico">
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+  </style>
 </head>
-<body>
-  <!-- Header placeholder (optional) -->
+<body class="bg-black text-gray-100 font-[Montserrat]">
+
+  <!-- Header -->
   <div id="header-container"></div>
   <script src="/component/header.js"></script>
 
-  <main class="container" role="main">
-    <section class="hero">
-      <h1>Support</h1>
-      <p class="lead">
-        Our primary support channel is the live chat on this page. For the fastest help, please start a conversation using the chat widget — our team is standing by to assist you.
+  <main class="max-w-4xl mx-auto px-6 py-16 text-center pt-40">
+
+    <!-- Hero Section -->
+    <section class="mb-16 fade-up">
+      <h1 class="text-4xl font-bold mb-6 text-green-400">Support</h1>
+      <p class="text-gray-300 mb-8 leading-relaxed">
+        Our primary support channel is the live chat on this page.
+        For the fastest help, please start a conversation using the chat widget — 
+        our team is standing by to assist you.
       </p>
 
-      <!-- Quick facts / SLA -->
-      <ul class="support-list" aria-hidden="false">
-        <li><strong>Live chat:</strong> Fastest way to get help — available here on the site.</li>
-        <li><strong>Email:</strong> contact@routinesoft.com — response within 1 business day.</li>
-        <li><strong>Phone:</strong> We do not offer phone support. Chat offers better, trackable support.</li>
+      <ul class="text-left bg-gray-900/50 p-6 rounded-2xl mb-8 space-y-2 border border-gray-800">
+        <li><strong class="text-green-400">Live chat:</strong> Fastest way to get help — available here on the site.</li>
+        <li><strong class="text-green-400">Email:</strong> contact@routinesoft.com — response within 1 business day.</li>
+        <li><strong class="text-green-400">Phone:</strong> We do not offer phone support. Chat offers better, trackable support.</li>
       </ul>
 
-      <!-- Primary CTA: open chat -->
-      <div class="cta-row">
-        <button id="open-chat-btn" class="primary-cta" aria-label="Open live chat">
-          <i class="fas fa-comments" aria-hidden="true"></i>
-          Start Live Chat
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+        <button id="open-chat-btn" class="bg-green-500 hover:bg-green-600 text-black font-semibold py-3 px-6 rounded-xl shadow-md flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1">
+          <i class="fas fa-comments"></i> Start Live Chat
         </button>
 
-        <!-- Secondary contact options -->
-        <a class="secondary-cta" href="mailto:contact@routinesoft.com">
-          <i class="fas fa-envelope" aria-hidden="true"></i> Email Us
+        <a href="mailto:contact@routinesoft.com"
+          class="border border-green-400 hover:bg-green-500 hover:text-black text-green-400 py-3 px-6 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-1">
+          <i class="fas fa-envelope"></i> Email Us
         </a>
       </div>
 
-      <!-- Mini explanation box for users who prefer short copy -->
-      <div class="mini-info" role="region" aria-label="How support works">
-        <p><strong>How it works:</strong> Click <em>Start Live Chat</em>, describe your issue and an agent will respond. If your request requires follow-up, we'll track it and send updates by email.</p>
+      <!-- Mini Explanation -->
+      <div class="bg-gray-900/60 p-6 rounded-2xl text-sm text-gray-300 border border-gray-800">
+        <p>
+          <strong class="text-green-400">How it works:</strong> Click 
+          <em>Start Live Chat</em>, describe your issue and an agent will respond. 
+          If your request requires follow-up, we'll track it and send updates by email.
+        </p>
       </div>
     </section>
 
-    <!-- FAQ / quick answers -->
-    <section class="faq">
-      <h2>Common questions</h2>
+    <!-- FAQ Section -->
+    <section class="text-left space-y-8">
+      <h2 class="text-3xl font-semibold mb-6 text-center text-green-400">Common Questions</h2>
 
-      <div class="faq-item">
-        <h3>What hours is chat available?</h3>
-        <p>Our team monitors the chat during business hours. If you contact us outside those hours, leave a message and we'll reply as soon as we're back online.</p>
+      <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-xl font-bold mb-2 text-white">What hours is chat available?</h3>
+        <p class="text-gray-300">Our team monitors the chat during business hours. 
+          If you contact us outside those hours, leave a message and we'll reply as soon as we're back online.
+        </p>
       </div>
 
-      <div class="faq-item">
-        <h3>I need billing or account help — can you call me?</h3>
-        <p>We don’t provide phone support; please use the chat so we can securely authenticate your account and keep a support record.</p>
+      <div class="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-xl font-bold mb-2 text-white">I need billing or account help — can you call me?</h3>
+        <p class="text-gray-300">We don’t provide phone support; please use the chat so we can securely authenticate your account and keep a support record.</p>
       </div>
     </section>
 
-    <!-- Social/contact icons -->
-    <footer class="support-footer" role="contentinfo">
-      <div class="contact-icons">
-        <a href="mailto:contact@routinesoft.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.instagram.com/routinesoftofc/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/routinesoft" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-messenger"></i></a>
+    <!-- Footer Section -->
+    <footer class="mt-16 text-center border-t border-gray-800 pt-8">
+      <div class="flex justify-center gap-6 mb-6 text-2xl">
+        <a href="mailto:contact@routinesoft.com" class="text-green-400 hover:text-green-300 transition"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/routinesoftofc/" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/routinesoft" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-400 transition"><i class="fab fa-facebook-messenger"></i></a>
       </div>
-      <p class="small">Prefer a transcript? After your chat, you can request the conversation transcript to be sent to your email.</p>
+      <p class="text-sm text-gray-500">Prefer a transcript? After your chat, you can request the conversation transcript to be sent to your email.</p>
     </footer>
   </main>
 
-  <!-- Footer placeholder (optional) -->
+  <!-- Footer -->
   <div id="footer-container"></div>
   <script src="/component/footer.js"></script>
 
-  <!-- Start of Tawk.to Script -->
+  <!-- Tawk.to Live Chat -->
   <script type="text/javascript">
-    // Tawk.to embed (replace the src id with your actual property ID if different)
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function(){
-      var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
       s1.async=true;
       s1.src='https://embed.tawk.to/68ad3a4e429f5919255f1e37/1j3ianh6d';
       s1.charset='UTF-8';
@@ -111,49 +118,45 @@
       s0.parentNode.insertBefore(s1,s0);
     })();
   </script>
-  <!-- End of Tawk.to Script -->
 
-  <!-- JS to open Tawk chat programmatically (resilient) -->
+  <!-- Open Tawk Chat Programmatically -->
   <script>
-    // Try to maximize the Tawk widget. If not loaded yet, retry for a short while.
     function openTawkChat() {
       function tryOpen() {
-        try {
-          if (window.Tawk_API && typeof window.Tawk_API.maximize === 'function') {
-            window.Tawk_API.maximize();
-            // focus the chat input when possible
-            if (typeof window.Tawk_API.focus === 'function') {
-              window.Tawk_API.focus();
-            }
-            return true;
-          }
-        } catch (e) {
-          // ignore and retry
+        if (window.Tawk_API && typeof window.Tawk_API.maximize === 'function') {
+          window.Tawk_API.maximize();
+          if (typeof window.Tawk_API.focus === 'function') window.Tawk_API.focus();
+          return true;
         }
         return false;
       }
-
       if (!tryOpen()) {
         let attempts = 0;
         const interval = setInterval(() => {
           attempts++;
-          if (tryOpen() || attempts > 50) { // ~5s total
-            clearInterval(interval);
-          }
+          if (tryOpen() || attempts > 50) clearInterval(interval);
         }, 100);
       }
     }
 
-    // Attach event listeners
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', () => {
       const btn = document.getElementById('open-chat-btn');
-      if (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          openTawkChat();
-        });
-      }
+      if (btn) btn.addEventListener('click', e => { e.preventDefault(); openTawkChat(); });
     });
   </script>
+
+          <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/68ad3a4e429f5919255f1e37/1j3ianh6d';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>

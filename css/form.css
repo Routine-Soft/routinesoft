@@ -1,0 +1,33 @@
+/* Form (FormSubmit) */
+.lead-form{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+  
+}
+.lead-form input[type="text"],
+.lead-form input[type="email"],
+.lead-form input[type="tel"]{
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--white);
+  outline:none;
+  min-width: 260px;
+}
+.lead-form button{
+  background: #00ac69;
+  color: #fff;
+  padding:12px 28px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  flex: 0 0 auto;
+}
+.lead-form button:hover{ opacity:0.95; transform:translateY(-2px); transition: all .12s ease; }

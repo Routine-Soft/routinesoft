@@ -1,34 +1,38 @@
-<!-- Rodapé com direitos reservados -->
-<footer class="footer">
-    <p>
-        &copy; All rights reserved. Routine Soft 2025 &nbsp
-        <a href="/pages/privacypolicy.html">Privacy Policy</a>
-    </p>
+<!-- /component/footer.html -->
+<footer
+  class="w-full bg-black/40 text-gray-400 text-sm py-10 text-center border-t border-white/10 fade-up"
+>
+  <div class="mb-3 flex items-center justify-center " >
+    <img src="/img/newlogo.svg" alt="" class="w-44">
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-6 mb-5 text-gray-300">
+    <a href="/pages/privacypolicy.html" class="hover:text-white transition">Privacy</a>
+    <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
+  </div>
+
+  <p class="text-gray-500">
+    © 2025 Routine Soft. All rights reserved.
+  </p>
 </footer>
 
 <style>
-    /* Footer (Rodapé) */
-    .footer {
-        background-color: #000000;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        margin-top: auto;
-    }
+  /* Fade animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+  }
 
-    .footer p {
-        font-size: 0.8rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
     }
-
-    .footer a {
-        color: #60a5fa;
-        text-decoration: none;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .footer a:hover {
-        text-decoration: underline;
-    }
+  }
 </style>

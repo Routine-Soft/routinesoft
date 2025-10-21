@@ -1,0 +1,18 @@
+/* Global Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #000000;
+    color: #fff;
+    margin: 0;
+    padding: 0px 60px 0px 60px;
+}
+
+/* START SECTION 1 */
+.section-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
