@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RN Ar Condicionado e Elétrica</title>
+  <meta name="description" content="Instalação, manutenção e venda de peças de ar-condicionado.">
+  <meta name="keywords" content="ar condicionado, manutenção, refrigeração, climatização, peças, elétrica automotiva, instalação de ar condicionado, RN Clima e Peças">
+  <meta name="author" content="RN Clima e Peças">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ícones -->
+  <script src="https://kit.fontawesome.com/98ec56a621.js" crossorigin="anonymous"></script>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+  <!-- Open Graph -->
+    <meta property="og:title" content="RN Ar Condicionado e Elétrica" />
+    <meta name="description" content="Instalação, manutenção e venda de peças de ar-condicionado. Atendimento especializado em refrigeração, climatização e elétrica.">
+    <meta property="og:image" content="https://rnclimaepecas.vercel.app/img/arte.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.rnclimaepecas.com" />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0a0f1a; /* Azul bem escuro */
+      color: #e5e7eb;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #0a1b2e 0%, #132a47 100%);
+    }
+    .btn-gradient {
+      background: linear-gradient(to right, #00b4d8, #0077b6);
+    }
+    .btn-gradient:hover {
+      opacity: 0.9;
+      transform: translateY(-3px);
+      transition: all 0.3s ease;
+    }
+    
+    @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.6); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(72, 187, 120, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(72, 187, 120, 0); }
+    }
+    a[href*="wa.me"] {
+        animation: pulse 2.5s infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+<!-- NAV -->
+<header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <img src="/img/img-portfolio/logo faixa.png" alt="Logo RN Clima e Peças" class="h-14 md:h-18 w-auto" />
+    </div>
+
+    <!-- Botão Hamburguer (aparece no mobile) -->
+    <button id="menu-btn" class="md:hidden text-cyan-600 text-3xl focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Menu -->
+    <nav id="menu" class="hidden md:flex space-x-8 text-gray-700 text-sm font-bold" >
+      <a href="#inicio" class="hover:text-cyan-600 transition">Home</a>
+      <a href="#servicos" class="hover:text-cyan-600 transition">AC</a>
+      <a href="#servicos" class="hover:text-cyan-600 transition">Heating</a>
+      <a href="#servicos" class="hover:text-cyan-600 transition">Ventilation</a>
+      <a href="#servicos-2" class="hover:text-cyan-600 transition">Services</a>
+      <a href="#produtos" class="hover:text-cyan-600 transition">Products</a>
+      <a href="#quemsomos" class="hover:text-cyan-600 transition">About</a>
+      <a href="#contact" class="hover:text-cyan-600 transition">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Menu Mobile (dropdown) -->
+  <div id="mobile-menu" class="hidden flex-col bg-white/80 text-gray-800 text-center py-4 space-y-4 md:hidden border-t border-gray-300">
+    <a href="#inicio" class="block hover:text-cyan-600 transition">Home</a>
+    <a href="#servicos" class="block hover:text-cyan-600 transition">AC</a>
+    <a href="#servicos" class="block hover:text-cyan-600 transition">Heating</a>
+    <a href="#servicos" class="block hover:text-cyan-600 transition">Ventilation</a>
+    <a href="#servicos-2" class="block hover:text-cyan-600 transition">Services</a>
+    <a href="#produtos" class="block hover:text-cyan-600 transition">Products</a>
+    <a href="#quemsomos" class="block hover:text-cyan-600 transition">About</a>
+    <a href="#contact" class="block hover:text-cyan-600 transition">Contact</a>
+  </div>
+</header>
+
+
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-bg min-h-screen flex flex-col md:flex-row items-center justify-center md:px-10 pt-32 md:pt-32 pb-10">
+    <div class="md:w-1/2 fade-up">
+      <img src="/img/img-portfolio/ar-t.png" alt="Carro com ar condicionado" class="rounded-2xl ">
+    </div>
+    <div class="md:w-1/2 fade-up md:pl-12 text-center md:text-left mt-1 md:mt-0">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        HVAC Contractors in USA
+      </h1>
+      <p class="text-lg text-gray-300 mb-6">
+        The [Your Name] offer honest and reliable service, repair and installation of residential heating and air conditioning systems
+      </p>
+      <a href="#contato" class="btn-gradient text-white px-8 py-3 rounded-full font-semibold inline-block">
+        SCHEDULE A QUOTE
+      </a>
+    </div>
+  </section>
+
+    <!-- Services 1 -->
+<section id="servicos" class="py-20 px-6 bg-[#0a0f1a]">
+<div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- Air Conditioning -->
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+        <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/ar-t.png" alt="" class="w-auto">
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Air Conditioning</h3>
+        <p class="text-gray-400 text-sm">
+            Your AC works hard — make sure it's working right. Our professional air conditioning maintenance keeps your system running efficiently, saving you money and avoiding unexpected breakdowns. Feel the difference of clean, powerful cooling every day.  
+            <br><br>
+            º Lower energy bills  <br>
+            º Longer AC lifespan  <br>
+            º Perfect comfort all year round
+        </p>
+    </div>
+
+    <!-- Heating -->
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+        <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/aquecedor.png" alt="" class="w-44">
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Heating Services</h3>
+        <p class="text-gray-400 text-sm">
+            When the cold hits, your heating system should be ready to perform. Our professional heating maintenance ensures consistent warmth, efficiency, and safety all season long. Keep your home cozy and your energy bills low.  
+            <br><br>
+            º Reliable performance  <br>
+            º Energy savings  <br>
+            º Total comfort in every room
+        </p>
+    </div>
+
+    <!-- Ventilation -->
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+        <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/vent.png" alt="" class="w-44">
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-white">Ventilation</h3>
+        <p class="text-gray-400 text-sm">
+            Don't let stale air steal your comfort. Our expert ventilation services keep your home or business fresh, healthy, and energy-efficient. Enjoy cleaner air, balanced temperature, and a system that truly breathes with you.  
+            <br><br>
+        º Improve air quality<br>  
+        º Save energy  <br>
+        º Protect your family’s health
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+<section id="servicos-2" class="py-20 px-6 bg-[#0a0f1a]">
+  <h2 class="text-center text-3xl font-bold text-cyan-400 mb-12 fade-up">Our Services</h2>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+      <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/c-instalador.jpg" alt="Technician performing electrical diagnostics on HVAC system" class="w-72 rounded-lg">
+        </div>
+      <h3 class="text-xl font-semibold mb-3">Air Conditioning Installation</h3>
+      <p class="text-gray-400 text-sm">Complete and safe installation of your air conditioning system.</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+      <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/c-ar.webp" alt="Technician performing electrical diagnostics on HVAC system" class="w-72 rounded-lg">
+        </div>
+      <h3 class="text-xl font-semibold mb-3">Air Conditioning Maintenance</h3>
+      <p class="text-gray-400 text-sm">Inspection, recharge, and repairs to ensure maximum performance.</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+      <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/c-aquecedor1.jpg" alt="Technician performing electrical diagnostics on HVAC system" class="w-72 rounded-lg">
+        </div>
+      <h3 class="text-xl font-semibold mb-3">Parts Sales</h3>
+      <p class="text-gray-400 text-sm">High-quality original and aftermarket parts for air conditioners.</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+      <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/c-eletric.jpg" alt="Technician performing electrical diagnostics on HVAC system" class="w-72 rounded-lg">
+        </div>
+      <h3 class="text-xl font-semibold mb-3">Electrical Services</h3>
+      <p class="text-gray-400 text-sm">Specialized electrical diagnostics and repairs for HVAC systems.</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+      <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/c-reparo.png" alt="Technician performing electrical diagnostics on HVAC system" class="w-72 rounded-lg">
+        </div>
+      <h3 class="text-xl font-semibold mb-3">Refrigeration</h3>
+      <p class="text-gray-400 text-sm">Efficient automotive refrigeration with modern technology.</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-8 rounded-2xl text-center hover:scale-105 transition shadow-lg">
+      <div class="flex justify-center mb-4">
+            <img src="/img/img-portfolio/c-aquecedor.png" alt="Technician performing electrical diagnostics on HVAC system" class="w-72 rounded-lg">
+        </div>
+      <h3 class="text-xl font-semibold mb-3">Climate Control</h3>
+      <p class="text-gray-400 text-sm">A comfortable environment in any weather.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- PRODUCTS -->
+<section id="produtos" class="py-20 bg-[#101828] px-6">
+  <h2 class="text-center text-3xl font-bold text-cyan-400 mb-12 fade-up">Featured Products</h2>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    
+    <!-- Example card -->
+    <div class="fade-up bg-[#132a47] p-4 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <img src="/img/img-portfolio/venda-1.jpg" alt="Air Compressor" class="rounded-xl mb-4 mx-auto">
+      <h3 class="font-semibold text-lg mb-2">LG Air Conditioner</h3>
+      <p class="text-gray-400 text-sm mb-2">High durability and efficiency.</p>
+      <p class="text-cyan-400 font-semibold mb-3">$1,980.00</p>
+      <p class="text-gray-400 text-xs">Payment: Card • Cash • Pix</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-4 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <img src="/img/img-portfolio/venda2.avif" alt="Air Compressor" class="rounded-xl mb-4 mx-auto">
+      <h3 class="font-semibold text-lg mb-2">Samsung Air Conditioner</h3>
+      <p class="text-gray-400 text-sm mb-2">High durability and efficiency.</p>
+      <p class="text-cyan-400 font-semibold mb-3">$3,248.00</p>
+      <p class="text-gray-400 text-xs">Payment: Card • Cash • Pix</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-4 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <img src="/img/img-portfolio/venda-1.jpg" alt="Air Compressor" class="rounded-xl mb-4 mx-auto">
+      <h3 class="font-semibold text-lg mb-2">LG Air Conditioner</h3>
+      <p class="text-gray-400 text-sm mb-2">High durability and efficiency.</p>
+      <p class="text-cyan-400 font-semibold mb-3">$1,980.00</p>
+      <p class="text-gray-400 text-xs">Payment: Card • Cash • Pix</p>
+    </div>
+
+    <div class="fade-up bg-[#132a47] p-4 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <img src="/img/img-portfolio/venda2.avif" alt="Air Compressor" class="rounded-xl mb-4 mx-auto">
+      <h3 class="font-semibold text-lg mb-2">Samsung Air Conditioner</h3>
+      <p class="text-gray-400 text-sm mb-2">High durability and efficiency.</p>
+      <p class="text-cyan-400 font-semibold mb-3">$3,248.00</p>
+      <p class="text-gray-400 text-xs">Payment: Card • Cash • Pix</p>
+    </div>
+
+    <!-- Copy this block and change image, name, and price for all 8 products -->
+    <!-- ... -->
+  </div>
+</section>
+
+  <!-- ABOUT US -->
+<section id="quemsomos" class="py-20 px-6 bg-[#0a0f1a]">
+  <div class="max-w-4xl mx-auto text-center fade-up">
+    <h2 class="text-3xl font-bold text-cyan-400 mb-6">About Us</h2>
+    <p class="text-gray-300 leading-relaxed">
+      <strong>[Your Name]</strong> is a company specialized in air conditioning, 
+      electrical services, and climate control. We operate with professionalism, quality, and commitment, offering installation, maintenance, and parts sales with warranty and personalized service.  
+      Our goal is to ensure thermal comfort and your well-being — always with the best cost-benefit ratio.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-[#101828] px-6">
+  <div class="max-w-4xl mx-auto text-center fade-up">
+    <h2 class="text-3xl font-bold text-cyan-400 mb-6">Contact Us</h2>
+    <p class="text-gray-300 mb-8">
+      Get in touch with our team to schedule your service or ask any questions.  
+      We’re ready to assist you quickly and efficiently.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+      <a href="https://wa.me/+55219992002356?text=Hello! I’d like to request a quote." target="_blank" class="btn-gradient px-8 py-3 rounded-full text-white font-semibold flex items-center gap-2">
+        <i class="fab fa-whatsapp text-2xl"></i> +55 (21) 992002356
+      </a>
+      <a href="tel:+5521992002356" class="px-8 py-3 border border-cyan-400 rounded-full text-cyan-400 font-semibold flex items-center gap-2 hover:bg-cyan-400/10 transition">
+        <i class="fas fa-phone text-2xl"></i> +55 (21) 9920023562
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#0a0f1a] py-8 text-center border-t border-gray-800 text-gray-400 text-sm">
+  <p>© 2025 [Your Name] — All rights reserved.</p>
+</footer>
+
+  <!-- JS: Efeitos fade-up -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+  <script>
+  // Menu hamburguer responsivo
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let isOpen = false;
+
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.innerHTML = isOpen
+      ? '<i class="fas fa-times"></i>'  // Ícone de X
+      : '<i class="fas fa-bars"></i>';  // Ícone de hambúrguer
+  });
+
+  // Fecha o menu ao clicar em um link
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      isOpen = false;
+    });
+  });
+</script>
+
+<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<a 
+  href="https://wa.me/+5521992002356?text=Hello!" 
+  target="_blank"
+  class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-all duration-300 hover:scale-110 z-50"
+  aria-label="Hello"
+>
+  <i class="fab fa-whatsapp text-3xl"></i>
+</a>
+
+</body>
+</html>
