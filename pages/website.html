@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Development — Routine Soft</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/98ec56a621.js" crossorigin="anonymous"></script>
+
+  <!-- Scroll suave -->
+  <style>html{scroll-behavior:smooth}</style>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Rajdhani:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/icon/favicon-32x32.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Routine Soft - Professional Website Development" />
+  <meta property="og:description" content="Get your professional website with domain and hosting included" />
+  <meta property="og:url" content="https://www.routinesoft.com/pages/website.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.routinesoft.com/img/logo-link.png" />
+</head>
+
+<body class="bg-black text-gray-100 font-[Montserrat]">
+  <!-- Header -->
+  <div id="header-container"></div>
+  <script src="/component/header.js"></script>
+
+  <!-- Hero -->
+  <section class="pt-40 pb-20 text-center bg-black/30 backdrop-blur-md fade-up">
+    <h1 class="text-4xl md:text-5xl font-semibold mb-4">Professional <span class="text-green-400">Website</span></h1>
+    <p class="text-gray-400 max-w-2xl mx-auto">Get your business online with a professional website. Fast delivery, free domain, hosting, and logo included.</p>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="w-full py-16 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12">Choose Your Plan</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Plan 1 -->
+        <div class="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-8 hover:border-green-500/50 transition fade-up">
+          <div class="text-center mb-6">
+            <h3 class="text-2xl font-semibold mb-2">Basic</h3>
+            <div class="text-4xl font-bold text-green-400 mb-1">$79</div>
+            <p class="text-gray-400 text-sm">One-time payment</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>Professional Website</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>1 Year Free Domain</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>1 Year Free Hosting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>Free Logo Design</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>Delivery in 1 Day</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>24/7 Support</span>
+            </li>
+          </ul>
+          
+          <button onclick="selectPlan('Basic', 79)" class="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition">
+            Choose Plan
+          </button>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="bg-black/40 backdrop-blur-md rounded-2xl border-2 border-green-500/50 p-8 hover:border-green-500 transition fade-up relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-black px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </div>
+          
+          <div class="text-center mb-6 mt-4">
+            <h3 class="text-2xl font-semibold mb-2">Professional</h3>
+            <div class="text-4xl font-bold text-green-400 mb-1">$100</div>
+            <p class="text-gray-400 text-sm">One-time payment</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>Everything in Basic</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>Professional Email</span>
+            </li>
+          </ul>
+          
+          <button onclick="selectPlan('Professional', 100)" class="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition">
+            Choose Plan
+          </button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-8 hover:border-green-500/50 transition fade-up">
+          <div class="text-center mb-6">
+            <h3 class="text-2xl font-semibold mb-2">Premium</h3>
+            <div class="text-4xl font-bold text-green-400 mb-1">$200</div>
+            <p class="text-gray-400 text-sm">One-time payment</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>Everything in Professional</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>2 Years Domain (2025-2027)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check text-green-400 mt-1"></i>
+              <span>2 Years Hosting (2025-2027)</span>
+            </li>
+          </ul>
+          
+          <button onclick="selectPlan('Premium', 200)" class="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition">
+            Choose Plan
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="myform" class="w-full bg-black/40 backdrop-blur-md border-t border-white/10 py-20 px-6 md:px-20 text-center fade-up">
+    <div class="max-w-lg mx-auto">
+      <h3 class="text-2xl font-semibold mb-6">Get Started Today</h3>
+      <p class="text-gray-400 mb-6">Fill out the form below and we'll get back to you within one business day to start your project.</p>
+
+      <form action="https://formsubmit.co/527894bd84d24a9d8d96773ae35a4128" method="POST" class="flex flex-col gap-4">
+        <input type="text" name="Name" placeholder="Name" required class="px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+        <input type="email" name="Email" placeholder="Your Email" required class="px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+        <input type="tel" name="Tel" placeholder="Phone" required class="px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+
+        <!-- Hidden fields -->
+        <input type="hidden" name="Product" value="Website" id="product-field" />
+        <input type="hidden" name="Plan" value="" id="plan-field" />
+        <input type="hidden" name="Price" value="" id="price-field" />
+        <input type="hidden" name="_subject" value="Website Lead - RoutineSoft" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://www.routinesoft.com/pages/thankyouplan.html" />
+
+        <button type="submit" class="mt-4 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-black font-semibold hover:opacity-90 transition glow-hover">Get My Website</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="w-full py-16 px-6 md:px-20 text-center">
+    <div class="bg-black/40 backdrop-blur-md rounded-2xl border border-white/10 p-8 md:p-12 max-w-3xl mx-auto fade-up">
+      <h3 class="text-2xl font-semibold mb-4">Have Questions? Contact Us</h3>
+      <p class="text-gray-400 mb-6">Send us a message on the live chat, or contact us by email or social media — we'll reply within one business day.</p>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <button id="open-chat-btn" class="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-black font-semibold rounded-full hover:opacity-90 transition">
+          <i class="fas fa-comments"></i> Live Chat
+        </button>
+        <a href="mailto:contact@routinesoft.com" class="flex items-center gap-2 text-gray-300 hover:text-white transition"><i class="fas fa-envelope text-green-400"></i> Email</a>
+        <a href="https://www.instagram.com/routinesoftofc/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-300 hover:text-white transition"><i class="fab fa-instagram text-pink-500"></i> Instagram</a>
+        <a href="https://www.facebook.com/routinesoft" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-300 hover:text-white transition"><i class="fab fa-facebook-messenger text-blue-500"></i> Messenger</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Icons -->
+  <div class="flex justify-center gap-6 py-12 fade-up">
+    <a href="https://www.instagram.com/routinesoftofc/" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition"><i class="fab fa-instagram text-3xl text-pink-500"></i></a>
+    <a href="https://www.facebook.com/routinesoft" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition"><i class="fab fa-facebook-messenger text-3xl text-blue-500"></i></a>
+    <a href="mailto:contact@routinesoft.com" class="hover:scale-110 transition"><i class="fas fa-envelope text-3xl text-red-500"></i></a>
+    <a href="https://meet.google.com/" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition"><i class="fas fa-video text-3xl text-green-500"></i></a>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script src="/component/footer.js"></script>
+
+  <!-- Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68ad3a4e429f5919255f1e37/1j3ianh6d';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+  <!-- Botão do chat -->
+  <script>
+    function openTawkChat() {
+      const tryOpen = () => {
+        if (window.Tawk_API && typeof window.Tawk_API.maximize === 'function') {
+          window.Tawk_API.maximize();
+          return true;
+        }
+        return false;
+      };
+      if (!tryOpen()) {
+        let tries = 0;
+        const interval = setInterval(() => {
+          tries++;
+          if (tryOpen() || tries > 40) clearInterval(interval);
+        }, 100);
+      }
+    }
+
+    function selectPlan(planName, price) {
+      document.getElementById('plan-field').value = planName;
+      document.getElementById('price-field').value = '$' + price;
+      
+      // Scroll to form
+      document.getElementById('myform').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      // Optional: Highlight the form
+      setTimeout(() => {
+        document.getElementById('myform').style.animation = 'pulse 0.5s';
+      }, 500);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('open-chat-btn');
+      if (btn) btn.addEventListener('click', (e) => { e.preventDefault(); openTawkChat(); });
+    });
+  </script>
+</body>
+</html>
