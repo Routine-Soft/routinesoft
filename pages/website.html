@@ -153,6 +153,33 @@
       <form action="https://formsubmit.co/527894bd84d24a9d8d96773ae35a4128" method="POST" class="flex flex-col gap-4">
         <input type="text" name="Name" placeholder="Name" required class="px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
         <input type="email" name="Email" placeholder="Your Email" required class="px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+        
+        <select name="Country" required class="px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <option value="">Select Country</option>
+          <option value="United States (+1)">United States (+1)</option>
+          <option value="Brazil (+55)">Brazil (+55)</option>
+          <option value="Canada (+1)">Canada (+1)</option>
+          <option value="United Kingdom (+44)">United Kingdom (+44)</option>
+          <option value="Mexico (+52)">Mexico (+52)</option>
+          <option value="Argentina (+54)">Argentina (+54)</option>
+          <option value="Chile (+56)">Chile (+56)</option>
+          <option value="Colombia (+57)">Colombia (+57)</option>
+          <option value="Peru (+51)">Peru (+51)</option>
+          <option value="Venezuela (+58)">Venezuela (+58)</option>
+          <option value="Ecuador (+593)">Ecuador (+593)</option>
+          <option value="Portugal (+351)">Portugal (+351)</option>
+          <option value="Spain (+34)">Spain (+34)</option>
+          <option value="France (+33)">France (+33)</option>
+          <option value="Germany (+49)">Germany (+49)</option>
+          <option value="Italy (+39)">Italy (+39)</option>
+          <option value="Australia (+61)">Australia (+61)</option>
+          <option value="India (+91)">India (+91)</option>
+          <option value="China (+86)">China (+86)</option>
+          <option value="Japan (+81)">Japan (+81)</option>
+          <option value="South Korea (+82)">South Korea (+82)</option>
+          <option value="Other">Other</option>
+        </select>
+        
         <input type="tel" name="Tel" placeholder="Phone" required class="px-4 py-3 rounded-xl bg-black/50 border border-white/10 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
 
         <!-- Hidden fields -->
@@ -212,6 +239,7 @@
   </script>
 
   <!-- Botão do chat -->
+  <!-- Botão do chat -->
   <script>
     function openTawkChat() {
       const tryOpen = () => {
@@ -231,16 +259,34 @@
     }
 
     function selectPlan(planName, price) {
-      document.getElementById('plan-field').value = planName;
-      document.getElementById('price-field').value = '$' + price;
+      const planField = document.getElementById('plan-field');
+      const priceField = document.getElementById('price-field');
       
-      // Scroll to form
-      document.getElementById('myform').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (planField && priceField) {
+        planField.value = planName;
+        priceField.value = '$' + price;
+      }
       
-      // Optional: Highlight the form
-      setTimeout(() => {
-        document.getElementById('myform').style.animation = 'pulse 0.5s';
-      }, 500);
+      // Scroll to form with offset
+      const formSection = document.getElementById('myform');
+      if (formSection) {
+        const offset = 100; // Offset from top
+        const elementPosition = formSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Add a subtle highlight effect
+        formSection.style.transition = 'box-shadow 0.3s ease';
+        formSection.style.boxShadow = '0 0 30px rgba(34, 197, 94, 0.5)';
+        
+        setTimeout(() => {
+          formSection.style.boxShadow = '';
+        }, 2000);
+      }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
